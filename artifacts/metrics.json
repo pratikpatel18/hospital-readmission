@@ -1,0 +1,105 @@
+{
+  "best_model": "xgboost",
+  "metric": "PR-AUC (average precision)",
+  "n_rows": {
+    "train": 59161,
+    "valid": 12677,
+    "test": 12678
+  },
+  "prevalence_test": 0.1396119261713204,
+  "cv_best_pr_auc": 0.4613083297467723,
+  "best_params": {
+    "colsample_bytree": 0.5998368910791798,
+    "learning_rate": 0.06535283531563524,
+    "max_depth": 2,
+    "min_child_weight": 3,
+    "n_estimators": 406,
+    "reg_lambda": 3.676275522134634,
+    "subsample": 0.7801997007878172
+  },
+  "test": {
+    "roc_auc": 0.802497027009669,
+    "pr_auc": 0.4615646636499573,
+    "brier": 0.18832814693450928,
+    "threshold": 0.51,
+    "tp": 1293,
+    "fp": 2958,
+    "fn": 477,
+    "tn": 7950,
+    "recall": 0.7305084745762712,
+    "precision": 0.3041637261820748,
+    "flag_rate": 0.33530525319451016,
+    "total_cost_inr": 61660500.0
+  },
+  "baseline_rule_test": {
+    "roc_auc": 0.6036533596862511,
+    "pr_auc": 0.19116819376979774
+  },
+  "baseline_logistic_test": {
+    "roc_auc": 0.7974852852516889,
+    "pr_auc": 0.4432856243714989,
+    "brier": 0.19262642721940978
+  },
+  "improvement_over_logistic": 0.041235353175223866,
+  "improvement_over_baseline": 1.414442771823055,
+  "improvement_over_prevalence": 2.3060546925164735,
+  "success_improvement_met": true,
+  "business": {
+    "cost_at_chosen_threshold": 61660500.0,
+    "cost_threshold_0.5": 61681500.0,
+    "cost_flag_nobody": 70800000.0,
+    "cost_flag_everybody": 68577000.0,
+    "saving_vs_flag_nobody_inr": 9139500.0,
+    "saving_per_1000_patients_inr": 720894.4628490298
+  },
+  "inference_latency_ms_with_shap": 15.000899599999684,
+  "success_latency_met": true,
+  "top_features": [
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.3734077215194702
+    },
+    {
+      "feature": "utilisation_score",
+      "mean_abs_shap": 0.255808562040329
+    },
+    {
+      "feature": "admission_type_Emergency",
+      "mean_abs_shap": 0.18425589799880981
+    },
+    {
+      "feature": "diagnosis_group_heart_failure",
+      "mean_abs_shap": 0.18032021820545197
+    },
+    {
+      "feature": "chronic_conditions",
+      "mean_abs_shap": 0.17988890409469604
+    },
+    {
+      "feature": "discharge_disposition_Left against advice",
+      "mean_abs_shap": 0.1463274508714676
+    },
+    {
+      "feature": "discharge_disposition_Home with follow-up",
+      "mean_abs_shap": 0.1447279304265976
+    },
+    {
+      "feature": "diagnosis_group_copd",
+      "mean_abs_shap": 0.13514944911003113
+    },
+    {
+      "feature": "diagnosis_group_other",
+      "mean_abs_shap": 0.13191649317741394
+    },
+    {
+      "feature": "diagnosis_group_surgical",
+      "mean_abs_shap": 0.11468827724456787
+    }
+  ],
+  "train_seconds": 87.9,
+  "time_ranges": {
+    "train_end": "2024-04-24",
+    "valid_end": "2024-08-05",
+    "test_end": "2024-11-16"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "threshold": 0.51,
+  "cost_matrix_inr": {
+    "FN": 40000.0,
+    "FP": 1500.0,
+    "TP": 29500.0,
+    "TN": 0.0
+  },
+  "assumptions": {
+    "readmission_cost": 40000.0,
+    "intervention_cost": 1500.0,
+    "intervention_effectiveness": 0.3
+  }
+}
